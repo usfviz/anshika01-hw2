@@ -4,7 +4,7 @@ library(ggplot2)
 library(reshape2)
 library(plotly)
 
-setwd('~/Documents/Data Viz/')
+#setwd('~/Documents/Data Viz/')
 frt=read.csv('FRT.csv')
 le=read.csv('LE.csv')
 region_df <- read.csv('data_LE_country.csv',na.strings="")
@@ -65,22 +65,8 @@ server = function(input, output) {
       xlim(10,100)+ ylim(0,10) + 
       xlab("Life Expectancy") + ylab("Fertility Rate") +
       scale_size_area(max_size = input$thePop))
-   #ggplotly()
-  # gg$data[[1]]$text <- dat_sub$Country.Name'
-  #$ print (gg$x$data[[1]])
-   #print (gg$x$data[[1]])
-   #gg$x$data[[2]]$text <-  dat_sub$Country.Name
-   #gg$x$data[[3]]$text <-  dat_sub$Country.Name
-   #gg$x$data[[4]]$text <-  dat_sub$Country.Name
-   #gg$x$data[[5]]$text <-  dat_sub$Country.Name
-   #gg$x$data[[6]]$text <-  dat_sub$Country.Name
-   #gg$x$data[[7]]$text <-  dat_sub$Country.Name
- #  gg$data[[1]]$hoverinfo <- dat_sub$Country.Name
-  # gg$data[[2]]$hoverinfo <- dat_sub$Country.Name
-   
-  # gg$config <- list(displayModeBar = F, showLink = F)
-   
-  # ggplotly()
+
+
     
   }) 
   
